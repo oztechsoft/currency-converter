@@ -10,9 +10,8 @@ use Symfony\Component\Console\Input\InputArgument;
 
 #[AsCommand(
     name: 'app:convert-currency',
-    // description: 'Creates a new user.',
+    description: 'convert currency ammount to another currency specified',
     hidden: false,
-    // aliases: ['app:add-user']
 )]
 class CurrencyConvertCommand extends Command
 {
