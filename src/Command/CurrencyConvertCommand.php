@@ -31,12 +31,12 @@ class CurrencyConvertCommand extends Command
 
     protected function execute(InputInterface $input, OutputInterface $output): int
     {
-        $output->writeln('Hello World!');
-
+        // user input should include amount, fromCurrency and toCurrency
         $amount = $input->getArgument('amount');
         $fromCurrencyCode = $input->getArgument('fromCurrency');
         $toCurrencyCode = $input->getArgument('toCurrency');
 
+        // conversion rates. New rates can be added.
         $conversionRates = [
             new Currency('USD', 1.5),
             new Currency('NZD', 0.9),
@@ -48,6 +48,7 @@ class CurrencyConvertCommand extends Command
         $fromCurrency = null;
         $toCurrency = null;
 
+        // Get the fromCurrency and toCurrency values
         foreach ($conversionRates as $currency) {
             if ($currency->getCode() === $fromCurrencyCode) {
                 $fromCurrency = $currency;
@@ -57,17 +58,19 @@ class CurrencyConvertCommand extends Command
             }
         }
 
+        // return error if currency does not match the conversion rates
         if (!$fromCurrency || !$toCurrency) {
             $output->writeln('Invalid currency code.');
             return Command::FAILURE;
         }
 
+        // convert the amount and display convertd amount
         $converter = new CurrencyConverter($amount, $fromCurrency, $toCurrency);
         $convertedAmount = $converter->convert();
-
         $output->writeln("Converted amount: $convertedAmount {$toCurrency->getCode()}");
+
+        // Add data to csv file
         $converter->convertToCSV();
-        $output->writeln("Data sent to CSV");
 
         return Command::SUCCESS;
     }
