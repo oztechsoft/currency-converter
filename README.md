@@ -31,7 +31,7 @@ This project provides a command-line tool for currency conversion and profit cal
 1. To perform currency conversion, use the following command:
 
    ```bash
-   php bin/console app:currency-converter <amount> <fromCurrency> <toCurrency>
+   php bin/console app:convert-currency <amount> <fromCurrency> <toCurrency>
 
 2. To calculate the total profit from currency conversions, use the following command:
 
