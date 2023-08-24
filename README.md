@@ -6,7 +6,7 @@ This project provides a command-line tool for currency conversion and profit cal
 
 ### Prerequisites
 
-- PHP (>= 8.0)
+- PHP (>= 8.1)
 - Composer
 
 ### Installation
