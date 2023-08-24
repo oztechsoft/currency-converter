@@ -14,12 +14,12 @@ This project provides a command-line tool for currency conversion and profit cal
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/currency-conversion.git
+   git clone https://github.com/oztechsoft/currency-converter.git
 
 2. Navigate to the project directory:
 
    ```bash
-   cd currency-conversion
+   cd currency-converter
 
 3. Install the dependencies using Composer:
 
