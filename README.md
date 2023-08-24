@@ -38,7 +38,7 @@ This project provides a command-line tool for currency conversion and profit cal
    ```bash
    php bin/console app:calculate-profit
 
-### Configguration
+### Configuration
 The project's conversion rates are defined in the CurrencyConverterCommand class in the src/Command/CurrencyConverterCommand.php file. You can modify these rates to suit your needs.
 
 
