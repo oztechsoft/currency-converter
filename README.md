@@ -6,7 +6,7 @@ This project provides a command-line tool for currency conversion and profit cal
 
 ### Prerequisites
 
-- PHP (>= 7.2)
+- PHP (>= 8.0)
 - Composer
 
 ### Installation
@@ -15,3 +15,31 @@ This project provides a command-line tool for currency conversion and profit cal
 
    ```bash
    git clone https://github.com/your-username/currency-conversion.git
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd currency-conversion
+
+3. Install the dependencies using Composer:
+
+   ```bash
+   composer install
+
+### Usage
+
+1. To perform currency conversion, use the following command:
+
+   ```bash
+   php bin/console app:currency-converter <amount> <fromCurrency> <toCurrency>
+
+2. To calculate the total profit from currency conversions, use the following command:
+
+   ```bash
+   php bin/console app:calculate-profit
+
+### Configguration
+The project's conversion rates are defined in the CurrencyConverterCommand class in the src/Command/CurrencyConverterCommand.php file. You can modify these rates to suit your needs.
+
+
+
