@@ -10,7 +10,7 @@ use Symfony\Component\Console\Input\InputArgument;
 
 #[AsCommand(
     name: 'app:calculate-profit',
-    description: '',
+    description: 'This command allows to calculate total profit acquired from all conversions',
     hidden: false,
 )]
 class CalculateTotalProfitCommand extends Command{
