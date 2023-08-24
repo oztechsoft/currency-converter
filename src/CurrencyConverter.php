@@ -26,8 +26,9 @@ class CurrencyConverter
         $fromCurrencyCode = $this->fromCurrency->getCode();
         $toCurrencyCode = $this->toCurrency->getCode();
     
-        $csvData = "{$this->amount} {$fromCurrencyCode}, {$this->convertedAmount} {$toCurrencyCode}\n";
-        file_put_contents('currency_conversion.csv', $csvData, FILE_APPEND);
+        $csvData = "{$this->amount} {$fromCurrencyCode},{$this->convertedAmount} {$toCurrencyCode}\n";
+        $csvFilePath = __DIR__ . '/currency_conversion.csv'; 
+        file_put_contents($csvFilePath, $csvData, FILE_APPEND);
     }
 }
 
